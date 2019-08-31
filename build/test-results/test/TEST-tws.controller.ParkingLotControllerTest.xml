@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tws.controller.ParkingLotControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-08-31T07:37:48" hostname="LAPTOP-NAF4NTA9" time="0.013">
+  <properties/>
+  <testcase name="should_return_isCreated_when_given_post_request_of_parkingboylots" classname="tws.controller.ParkingLotControllerTest" time="0.013"/>
+  <system-out><![CDATA[2019-08-31 15:37:48.269  INFO 11120 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [tws.controller.ParkingLotControllerTest], using SpringBootContextLoader
+2019-08-31 15:37:48.270  INFO 11120 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [tws.controller.ParkingLotControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-08-31 15:37:48.270  INFO 11120 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [tws.controller.ParkingLotControllerTest]: ParkingLotControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-08-31 15:37:48.273  INFO 11120 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration tws.Application for test class tws.controller.ParkingLotControllerTest
+2019-08-31 15:37:48.274  INFO 11120 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-08-31 15:37:48.275  INFO 11120 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@63da6c74, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6af54830, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@38a6241a, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1f3345d5, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2f3a338b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6fce5a94, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@66c13583, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6359c963, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1d8118e8, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6eb36, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6f04ab98, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@423b65ca]
+2019-08-31 15:37:48.278 DEBUG 11120 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /parkingLots
+2019-08-31 15:37:48.278 DEBUG 11120 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Returning handler method [public org.springframework.http.ResponseEntity<tws.entity.ParkingLot> tws.controller.ParkingLotController.insert(tws.entity.ParkingLot)]
+2019-08-31 15:37:48.279 DEBUG 11120 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Read [class tws.entity.ParkingLot] as "application/json;charset=UTF-8" with [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@58025d78]
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /parkingLots
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+             Body = {"parkingLotID":1,"capatity":80,"availablePositionCount":50,"parkingBoyID":3}
+    Session Attrs = {}
+
+Handler:
+             Type = tws.controller.ParkingLotController
+           Method = public org.springframework.http.ResponseEntity<tws.entity.ParkingLot> tws.controller.ParkingLotController.insert(tws.entity.ParkingLot)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 201
+    Error message = null
+          Headers = {}
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

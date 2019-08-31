@@ -16,13 +16,13 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.jdbc.JdbcTestUtils;
 
 import tws.entity.ParkingBoy;
+import tws.entity.ParkingLot;
 
 @RunWith(SpringRunner.class)
 @MybatisTest
-public class ParkingBoyMApperTest {
-
+public class ParkingLotMapperTest {
 	@Autowired
-	private ParkingBoyMapper parkingBoyMapper;
+	private ParkingLotMapper parkingLotMapper;
 	
 	JdbcTemplate jdbcTemplate;
 	
@@ -33,35 +33,31 @@ public class ParkingBoyMApperTest {
 
     @After
     public void tearDown() throws Exception {
-        JdbcTestUtils.deleteFromTables(jdbcTemplate, "parking_boy");
+        JdbcTestUtils.deleteFromTables(jdbcTemplate, "parking_lot");
+    }
+	
+    @Test
+    public void shouldFetchAllParkinglots() {
+    	//given
+    	jdbcTemplate.execute("INSERT INTO PARKING_LOT VALUES(5,58,20,5);");
+    	
+    	//when
+    	List<ParkingLot>  parkingLots = parkingLotMapper.selectAll();
+    	
+    	//then
+    	assertEquals(1, parkingLots.size());
     }
     
     @Test
-    public void shouldFetchAllParkingboys() {
+    public void shouldFetchParkinglotsWhenInsterParkinglots() {
     	//given
-    	jdbcTemplate.execute("INSERT INTO PARKING_BOY VALUES(5,'zhangsan',21);");
+    	jdbcTemplate.execute("INSERT INTO PARKING_LOT VALUES(5,58,20,5);");
     	
     	//when
-    	List<ParkingBoy>  parkingBoys = parkingBoyMapper.selectAll();
+    	List<ParkingLot>  parkingLots = parkingLotMapper.selectAll();
     	
     	//then
-    	assertEquals(5, parkingBoys.get(0).getParkingBoyID());
-    	assertEquals("zhangsan", parkingBoys.get(0).getParkingBoyName());
-    	assertEquals(21, parkingBoys.get(0).getParkingBoyAge());
-    }
-    
-    @Test
-    public void shouldFetchParkingboysWhenInsterParkingboys() {
-    	//given
-    	jdbcTemplate.execute("INSERT INTO PARKING_BOY VALUES(5,'zhangsan',21);");
-    	
-    	//when
-    	List<ParkingBoy>  parkingBoys = parkingBoyMapper.selectAll();
-    	//then
-    	
-    	assertEquals("zhangsan", parkingBoys.get(0).getParkingBoyName()); 
-    }
-    
-    
-    
+    	assertEquals(5, parkingLots.get(0).getParkingLotID());
+    } 
+
 }
