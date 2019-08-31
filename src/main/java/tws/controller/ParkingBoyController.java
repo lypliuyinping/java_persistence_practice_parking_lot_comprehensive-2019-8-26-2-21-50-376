@@ -26,6 +26,7 @@ public class ParkingBoyController {
         List<ParkingBoy> parkingBoy=parkingBoyMapper.selectAll();
         return ResponseEntity.ok(parkingBoy);
     }
+    
     @PostMapping("")
     public ResponseEntity<ParkingBoy> insert(@RequestBody ParkingBoy parkingBoy) {
         parkingBoyMapper.insert(parkingBoy);
