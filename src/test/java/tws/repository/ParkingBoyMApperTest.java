@@ -45,9 +45,7 @@ public class ParkingBoyMApperTest {
     	List<ParkingBoy>  parkingBoys = parkingBoyMapper.selectAll();
     	
     	//then
-    	assertEquals(5, parkingBoys.get(0).getParkingBoyID());
-    	assertEquals("zhangsan", parkingBoys.get(0).getParkingBoyName());
-    	assertEquals(21, parkingBoys.get(0).getParkingBoyAge());
+    	assertEquals(1, parkingBoys.size());
     }
     
     @Test

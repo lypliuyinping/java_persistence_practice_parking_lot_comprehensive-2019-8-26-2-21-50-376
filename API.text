@@ -1,0 +1,37 @@
+Method:POST
+URL:/parkingBoys
+request body:{  "parkingBoyID":1,
+              	"parkingBoyName":"admin",
+              	"parkingBoyAge":18}
+response body:
+response code:201
+
+Method:GET
+URL:/parkingBoys
+request body:
+response body:[{  "parkingBoyID":1,
+                  "parkingBoyName":"admin",
+                  "parkingBoyAge":18}]
+response code:200
+
+Method:POST
+URL:/parkingLots
+request body:{
+             	"parkingLotID":1,
+             	"capatity":50,
+             	"availablePositionCount":30,
+             	"parkingBoyID":1
+             }
+response body:
+response code:201
+
+Method:GET
+URL:/parkingLots
+request body:
+response body:[{
+					"parkingLotID":1,
+                 "capatity":50,
+                  "availablePositionCount":30,
+                  "parkingBoyID":1
+              }]
+response code:200
