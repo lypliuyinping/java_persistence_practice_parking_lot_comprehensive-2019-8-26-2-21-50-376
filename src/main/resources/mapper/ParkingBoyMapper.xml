@@ -11,5 +11,9 @@
        values(#{parkingBoy.parkingBoyID},#{parkingBoy.parkingBoyName},#{parkingBoy.parkingBoyAge});
     </insert>
 
-
+	<select id="selectParkinglotOfOneParkingboy">
+	select parkingLotID from `parking_lot` where parkingLotID = #{parkingLotID};
+	</select>
+	
+	
 </mapper>

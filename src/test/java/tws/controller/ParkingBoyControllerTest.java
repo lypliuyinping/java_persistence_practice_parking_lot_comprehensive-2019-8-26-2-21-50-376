@@ -36,5 +36,11 @@ public class ParkingBoyControllerTest {
 	                .andDo(print())
 	                .andExpect(status().isOk())
 	                .andExpect(content().string("[{\"parkingBoyID\":1,\"parkingBoyName\":\"里斯\",\"parkingBoyage\":20}]"));
-	    }			
+	    }	
+	 
+	 
+	 
+	 
+	 
+	 
 }
