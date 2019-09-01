@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import tws.entity.ParkingLot;
 import tws.repository.ParkingLotMapper;
-
+import tws.service.ParkingLotService;
 
 import java.net.URI;
 import java.util.List;
@@ -20,17 +20,17 @@ import java.util.List;
 public class ParkingLotController {
 
     @Autowired
-    private ParkingLotMapper parkingLotMapper;
+    ParkingLotService parkingLotService;
 
     @GetMapping("")
     public ResponseEntity<List<ParkingLot>> getAll() {
-        List<ParkingLot> parkingLot=parkingLotMapper.selectAll();
+        List<ParkingLot> parkingLot=parkingLotService.selectAllParkingLot();
         return ResponseEntity.ok(parkingLot);
     }
 
     @PostMapping("")
     public ResponseEntity<ParkingLot> insert(@RequestBody ParkingLot parkingLot) {
-        parkingLotMapper.insert(parkingLot);
+    	parkingLotService.insert(parkingLot);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 }
