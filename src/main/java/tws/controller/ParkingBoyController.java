@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import tw.service.ParkingBoyService;
-import tw.service.ParkingLotService;
 import tws.entity.ParkingBoy;
 import tws.entity.ParkingLot;
 import tws.repository.ParkingBoyMapper;
 import tws.repository.ParkingLotMapper;
+import tws.service.ParkingBoyService;
+import tws.service.ParkingLotService;
 
 import java.net.URI;
 import java.util.List;
@@ -25,6 +25,7 @@ import java.util.List;
 public class ParkingBoyController {
 @Autowired 
 ParkingBoyService parkingBoyService;
+ParkingLotService parkingLotService;
 //    @Autowired
 //    private ParkingBoyMapper parkingBoyMapper;
 //    @Autowired
@@ -46,8 +47,10 @@ ParkingBoyService parkingBoyService;
     }  
     
     @GetMapping("/{parkingBoyID}/parkingLots")
-    public ResponseEntity<List<Integer>> getAllParkinglotOfOneParkingBoy(@PathVariable("parkingBoyID") int parkingBoyID){
-    	 return ResponseEntity.ok(parkingLotMapper.selectParkinglotIdbyOneParkingboy(parkingBoyID));
+    public ResponseEntity<List<ParkingLot>> getAllParkinglotOfOneParkingBoy(@PathVariable("parkingBoyID") int parkingBoyID){
+    // return ResponseEntity.ok(parkingLotMapper.selectParkinglotIdbyOneParkingboy(parkingBoyID));
+    	 List<ParkingLot> parkingLots =parkingLotService.selectParkinglotIdbyOneParkingboy(parkingBoyID);
+    	return ResponseEntity.ok(parkingLots);
     	//return ParkingLotService.selectParkinglotIdbyOneParkingboy(parkingBoyID); 
     }    
 }
