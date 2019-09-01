@@ -41,8 +41,7 @@ ParkingLotService parkingLotService;
     @PostMapping("")
     public ResponseEntity<ParkingBoy> insert(@RequestBody ParkingBoy parkingBoy) {
        // parkingBoyMapper.insert(parkingBoy);
-    	parkingBoyService.insertParkingBoys(parkingBoy);
-    	
+    	parkingBoyService.insertParkingBoys(parkingBoy);   	
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }  
     
@@ -51,6 +50,5 @@ ParkingLotService parkingLotService;
     // return ResponseEntity.ok(parkingLotMapper.selectParkinglotIdbyOneParkingboy(parkingBoyID));
     	 List<ParkingLot> parkingLots =parkingLotService.selectParkinglotIdbyOneParkingboy(parkingBoyID);
     	return ResponseEntity.ok(parkingLots);
-    	//return ParkingLotService.selectParkinglotIdbyOneParkingboy(parkingBoyID); 
     }    
 }

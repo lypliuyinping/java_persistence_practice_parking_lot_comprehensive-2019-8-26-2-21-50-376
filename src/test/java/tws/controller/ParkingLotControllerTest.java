@@ -11,6 +11,8 @@ import org.springframework.test.web.servlet.MockMvc;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -26,5 +28,14 @@ public class ParkingLotControllerTest {
                 .andDo(print())
                 .andExpect(status().isCreated());
     }
-	}
+	
+	  @Test
+	    public void should_return_isOK_and_content_when_given_a_get_request_parkingLot() throws Exception {
+	        mockMvc.perform(get("/parkingLots"))
+	                .andDo(print())
+	                .andExpect(status().isOk())
+	                .andExpect(content().string("[]"));
+	    }
+	
+}
 

@@ -24,5 +24,10 @@ public class ParkingLotService {
 	public void insert(@RequestBody ParkingLot parkingLot) {
 		parkingLotMapper.insert(parkingLot);
 	}
+
+
+	public List<ParkingLot> selectParkinglotIdbyOneParkingboy(int parkingBoyID) {
+		return parkingLotMapper.selectParkinglotIdbyOneParkingboy(parkingBoyID);
+	}
 	
 }
