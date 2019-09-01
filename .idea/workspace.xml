@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08eb2724-892b-4765-9a3e-66254e876c97" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/application.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/application.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tw/service/ParkingLotService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tw/service/ParkingLotService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tws/controller/ParkingBoyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tws/controller/ParkingBoyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tws/repository/ParkingBoyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tws/repository/ParkingBoyMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ParkingBoyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ParkingBoyMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tws/controller/ParkingBoyControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tws/controller/ParkingBoyControllerTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +58,7 @@
       <option name="presentableId" value="Default" />
       <updated>1567160569910</updated>
       <workItem from="1567160573249" duration="67000" />
-      <workItem from="1567240140825" duration="832000" />
+      <workItem from="1567240140825" duration="1468000" />
     </task>
     <servers />
   </component>

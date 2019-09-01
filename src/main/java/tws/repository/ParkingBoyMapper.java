@@ -16,8 +16,5 @@ public interface ParkingBoyMapper {
 
     void insert(@Param("parkingBoy") ParkingBoy parkingBoy);
     
-    
-    
-    
-    
+
 }
